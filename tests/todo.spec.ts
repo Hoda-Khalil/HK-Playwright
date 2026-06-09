@@ -72,7 +72,7 @@ test('should be able to delete a todo',async({page,request,context})=>{
     /*await page.click('[data-testid="add"]');
    await page.getByTestId('new-todo').fill('New Item');
    await page.click('[data-testid="submit-newTask"]');*/
-   
+
    const newTodoPage= new NewTodoPage(page,request);
    await newTodoPage.addNewTaskUsingAPI(user);
    const todoPage= new TodoPage(page);
