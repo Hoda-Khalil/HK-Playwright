@@ -1,0 +1,38 @@
+
+import {faker} from '@faker-js/faker';
+export default class User{
+   private firstName:string;
+        private lastName:string;
+        private email   :string;
+        private password: string;
+        private access_token: string;
+        private userID      :string;
+
+    constructor()
+    {
+        this.firstName=faker.person.firstName();
+        this.lastName=faker.person.lastName();
+        this.email=faker.internet.email();
+        this.password='Test@@123';
+
+    }
+    public getFirstName(){
+        return this.firstName;
+    }
+    public getLastName(){
+        return this.lastName;
+    }
+    public getEmail(){
+        return this.email;
+    }
+    public getPassword(){
+        return this.password;
+    }
+
+    public getAccessToken(){
+        return this.access_token;
+    }
+    public setAccesToken(access_token:string){
+        this.access_token=access_token;
+    }
+}
